@@ -5,31 +5,34 @@ import { Star, Heart, Play } from 'lucide-react';
 const TrustBadges = () => {
   const badges = [
     {
-      icon: <Star className="w-4 h-4 text-yellow-500" />,
+      icon: <Star className="w-4 h-4 text-yellow-600" />,
       text: "4.8 on Google",
-      bgColor: "bg-yellow-50 border-yellow-200"
+      bgColor: "bg-gradient-to-r from-yellow-50 to-yellow-100 border-yellow-200",
+      textColor: "text-yellow-800"
     },
     {
-      icon: <Heart className="w-4 h-4 text-green-500" />,
+      icon: <Heart className="w-4 h-4 text-green-600" />,
       text: "4.7 on Trustpilot",
-      bgColor: "bg-green-50 border-green-200"
+      bgColor: "bg-gradient-to-r from-green-50 to-green-100 border-green-200",
+      textColor: "text-green-800"
     },
     {
-      icon: <Play className="w-4 h-4 text-blue-500" />,
+      icon: <Play className="w-4 h-4 text-red-600" />,
       text: "Featured on Shark Tank",
-      bgColor: "bg-blue-50 border-blue-200"
+      bgColor: "bg-gradient-to-r from-red-50 to-red-100 border-red-200",
+      textColor: "text-red-800"
     }
   ];
 
   return (
-    <div className="flex flex-wrap gap-3 mt-6">
+    <div className="flex flex-wrap gap-3">
       {badges.map((badge, index) => (
         <div
           key={index}
-          className={`flex items-center space-x-2 px-3 py-2 rounded-full border ${badge.bgColor} shadow-sm`}
+          className={`flex items-center space-x-2 px-4 py-3 rounded-full border-2 ${badge.bgColor} shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105`}
         >
           {badge.icon}
-          <span className="text-sm font-medium text-gray-700">{badge.text}</span>
+          <span className={`text-sm font-bold ${badge.textColor}`}>{badge.text}</span>
         </div>
       ))}
     </div>
