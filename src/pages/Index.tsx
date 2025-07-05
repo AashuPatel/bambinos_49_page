@@ -5,7 +5,7 @@ import BookingForm from '@/components/BookingForm';
 import TrustBadges from '@/components/TrustBadges';
 import FOMONotifications from '@/components/FOMONotifications';
 import { Button } from '@/components/ui/button';
-import { Star, CheckCircle, Users, BookOpen, MessageCircle, Shield, Award, Globe } from 'lucide-react';
+import { Star, Users, Award, Globe, CheckCircle, Sparkles, Zap, Shield } from 'lucide-react';
 
 const Index = () => {
   const scrollToBooking = () => {
@@ -14,145 +14,137 @@ const Index = () => {
   };
 
   const features = [
-    { icon: <MessageCircle className="w-5 h-5" />, text: "Live 1-on-1 Sessions" },
-    { icon: <Users className="w-5 h-5" />, text: "Expert Teachers", highlight: true },
-    { icon: <BookOpen className="w-5 h-5" />, text: "Complete Curriculum" },
-    { icon: <Shield className="w-5 h-5" />, text: "Proven Results" }
+    { icon: <Zap className="w-5 h-5" />, text: "Live 1-on-1 Sessions", color: "from-purple-500 to-pink-500" },
+    { icon: <Users className="w-5 h-5" />, text: "Expert Teachers", color: "from-blue-500 to-cyan-500" },
+    { icon: <Shield className="w-5 h-5" />, text: "Proven Results", color: "from-green-500 to-emerald-500" },
+    { icon: <Sparkles className="w-5 h-5" />, text: "Complete Curriculum", color: "from-orange-500 to-red-500" }
   ];
 
-  const proofPoints = [
-    { icon: <Globe className="w-6 h-6 text-blue-600" />, number: "50,000+", label: "Students Worldwide" },
-    { icon: <Award className="w-6 h-6 text-yellow-500" />, number: "4.8/5", label: "Parent Rating" },
-    { icon: <Star className="w-6 h-6 text-orange-500" />, number: "95%", label: "Success Rate" }
+  const stats = [
+    { icon: <Globe className="w-8 h-8" />, number: "50K+", label: "Happy Students", color: "text-blue-600" },
+    { icon: <Star className="w-8 h-8" />, number: "4.9/5", label: "Parent Rating", color: "text-yellow-500" },
+    { icon: <Award className="w-8 h-8" />, number: "98%", label: "Success Rate", color: "text-green-600" }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50/30 relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-20 left-10 w-40 h-40 bg-blue-400 rounded-full blur-3xl"></div>
-        <div className="absolute top-60 right-20 w-32 h-32 bg-yellow-400 rounded-full blur-2xl"></div>
-        <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-purple-400 rounded-full blur-2xl"></div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/50 relative overflow-hidden">
+      {/* Modern Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-400/10 to-purple-400/10 rounded-full blur-3xl"></div>
       </div>
 
       <Header />
       <FOMONotifications />
 
-      {/* Hero Section - Everything Above the Fold */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[calc(100vh-120px)]">
+      {/* Hero Section */}
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+        <div className="grid lg:grid-cols-12 gap-12 items-center min-h-[calc(100vh-120px)]">
           
-          {/* Left Content - 7 columns */}
-          <div className="lg:col-span-7 space-y-8 animate-fade-in">
+          {/* Left Content */}
+          <div className="lg:col-span-7 space-y-8">
             
             {/* Main Headline */}
             <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight animate-slide-in-left">
-                Master English with{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800">
-                  Live Expert Teachers
+              <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-200/50 rounded-full backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 text-blue-600 mr-2" />
+                <span className="text-sm font-semibold text-blue-700">Trusted by 50,000+ families worldwide</span>
+              </div>
+              
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight">
+                <span className="text-gray-900">Master English with</span>
+                <br />
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
+                  Expert Teachers
                 </span>
               </h1>
               
-              <p className="text-lg sm:text-xl text-gray-700 font-semibold leading-relaxed max-w-2xl animate-slide-in-left" style={{animationDelay: '0.2s'}}>
-                Join 50,000+ students across 25+ countries. Professional assessment + live demo class for just{' '}
-                <span className="inline-flex items-center bg-gradient-to-r from-orange-400 to-yellow-500 text-white px-4 py-2 rounded-full font-bold text-lg shadow-lg">
+              <p className="text-xl sm:text-2xl text-gray-700 font-medium leading-relaxed max-w-2xl">
+                Live 1-on-1 sessions with certified teachers. Get your professional assessment + demo class for just{' '}
+                <span className="inline-flex items-center bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-xl font-bold text-xl shadow-lg transform -rotate-1">
                   ₹49
                 </span>
               </p>
             </div>
 
             {/* Trust Badges */}
-            <div className="animate-slide-in-left" style={{animationDelay: '0.4s'}}>
+            <div className="pt-4">
               <TrustBadges />
             </div>
 
-            {/* Key Features Grid */}
-            <div className="grid grid-cols-2 gap-4 pt-6 animate-slide-in-left" style={{animationDelay: '0.6s'}}>
+            {/* Features Grid */}
+            <div className="grid grid-cols-2 gap-4 pt-6">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className={`flex items-center space-x-3 p-4 rounded-xl border-2 transition-all duration-300 hover:shadow-lg hover:scale-105 cursor-pointer ${
-                    feature.highlight 
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white border-blue-800 shadow-lg' 
-                      : 'bg-white/90 backdrop-blur-sm border-blue-200 hover:border-blue-400 hover:bg-white shadow-sm'
-                  }`}
+                  className="group relative p-6 bg-white/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className={feature.highlight ? 'text-blue-100' : 'text-blue-600'}>
-                    {feature.icon}
+                  <div className={`absolute inset-0 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
+                  <div className="relative flex items-center space-x-4">
+                    <div className={`p-3 bg-gradient-to-r ${feature.color} rounded-xl text-white shadow-lg`}>
+                      {feature.icon}
+                    </div>
+                    <span className="font-semibold text-gray-900">{feature.text}</span>
                   </div>
-                  <span className={`font-semibold text-sm ${feature.highlight ? 'text-white' : 'text-gray-900'}`}>
-                    {feature.text}
-                  </span>
                 </div>
               ))}
             </div>
 
-            {/* Social Proof Numbers */}
-            <div className="flex flex-wrap gap-8 pt-6 animate-slide-in-left" style={{animationDelay: '0.8s'}}>
-              {proofPoints.map((point, index) => (
-                <div key={index} className="flex items-center space-x-3 group">
-                  <div className="p-3 bg-white rounded-xl shadow-md border border-gray-100 group-hover:shadow-lg transition-all duration-300 group-hover:scale-110">
-                    {point.icon}
+            {/* Stats */}
+            <div className="flex flex-wrap gap-8 pt-6">
+              {stats.map((stat, index) => (
+                <div key={index} className="flex items-center space-x-4 group">
+                  <div className="p-4 bg-white rounded-2xl shadow-lg group-hover:shadow-xl transition-all duration-300 border border-gray-100">
+                    <div className={stat.color}>{stat.icon}</div>
                   </div>
                   <div>
-                    <div className="font-bold text-2xl text-gray-900">{point.number}</div>
-                    <div className="text-sm text-gray-600 font-semibold">{point.label}</div>
+                    <div className="text-3xl font-bold text-gray-900">{stat.number}</div>
+                    <div className="text-sm font-medium text-gray-600">{stat.label}</div>
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* CTA Button for Mobile */}
-            <div className="lg:hidden pt-8 animate-slide-in-left" style={{animationDelay: '1s'}}>
+            {/* Mobile CTA */}
+            <div className="lg:hidden pt-8">
               <Button
                 onClick={scrollToBooking}
                 size="lg"
-                className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 text-lg font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] focus:ring-4 focus:ring-blue-200"
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] border-0"
               >
-                Book Demo Class - ₹49
+                Book Your Demo Class - ₹49
               </Button>
             </div>
           </div>
 
-          {/* Right Side - Booking Form - 5 columns */}
-          <div className="lg:col-span-5 flex justify-center lg:justify-end animate-slide-in-right">
+          {/* Right Side - Booking Form */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end">
             <BookingForm />
           </div>
         </div>
 
-        {/* Testimonial Banner */}
-        <div className="mt-12 bg-gradient-to-r from-blue-600 via-blue-700 to-purple-700 rounded-2xl p-8 text-center shadow-2xl border border-blue-500/20 animate-fade-in" style={{animationDelay: '1.2s'}}>
-          <div className="flex justify-center mb-4">
-            <div className="flex space-x-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-              ))}
+        {/* Social Proof Banner */}
+        <div className="mt-16 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-3xl p-8 text-center shadow-2xl border border-gray-700/20 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>
+          <div className="relative">
+            <div className="flex justify-center mb-6">
+              <div className="flex space-x-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-8 h-8 text-yellow-400 fill-current" />
+                ))}
+              </div>
             </div>
+            <blockquote className="text-2xl font-bold text-white mb-4 leading-relaxed">
+              "My daughter Anaya went from shy to confident in English in just 3 weeks!"
+            </blockquote>
+            <cite className="text-blue-200 font-medium flex items-center justify-center">
+              <CheckCircle className="w-5 h-5 mr-2" />
+              Priya Sharma, Happy Parent - Mumbai
+            </cite>
           </div>
-          <blockquote className="text-xl font-bold text-white mb-4">
-            "Bambinos helped my child speak English confidently in just a few weeks!"
-          </blockquote>
-          <cite className="text-blue-100 font-semibold">— Priya Sharma, Happy Parent from Mumbai</cite>
         </div>
       </section>
-
-      {/* Minimal Footer */}
-      <footer className="bg-gray-900 py-8 mt-12 relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <div className="text-white font-bold text-lg mb-4 sm:mb-0">Bambinos.Live</div>
-            <div className="flex space-x-6 text-gray-400 text-sm">
-              <a href="#" className="hover:text-white transition-colors duration-200">Terms</a>
-              <a href="#" className="hover:text-white transition-colors duration-200">Privacy</a>
-              <a href="#" className="hover:text-white transition-colors duration-200">Contact</a>
-            </div>
-          </div>
-          <div className="text-center text-gray-500 text-sm mt-4">
-            © 2024 Bambinos.Live. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 };
