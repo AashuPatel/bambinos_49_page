@@ -32,8 +32,7 @@ const TrustBadges = () => {
       {badges.map((badge, index) => (
         <div
           key={index}
-          className={`flex items-center space-x-3 px-5 py-3 rounded-full border-2 ${badge.bgColor} ${badge.shadow} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer animate-bounce`}
-          style={{animationDelay: `${index * 0.2}s`, animationDuration: '2s'}}
+          className={`flex items-center space-x-3 px-5 py-3 rounded-full border-2 ${badge.bgColor} ${badge.shadow} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer`}
         >
           {badge.icon}
           <span className={`text-sm font-bold ${badge.textColor}`}>{badge.text}</span>

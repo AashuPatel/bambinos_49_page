@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
-import { Phone, Clock, Flame } from 'lucide-react';
+import { Phone, Flame } from 'lucide-react';
 
 const BookingForm = () => {
   const [mobile, setMobile] = useState('');
@@ -27,14 +27,13 @@ const BookingForm = () => {
   };
 
   return (
-    <div id="booking-form" className="bg-white/95 backdrop-blur-lg p-8 rounded-3xl shadow-2xl border-2 border-blue-100 max-w-md w-full relative overflow-hidden animate-slide-in-right">
-      {/* Decorative elements */}
-      <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full -translate-y-4 translate-x-4"></div>
-      <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-yellow-400/20 to-orange-400/20 rounded-full translate-y-4 -translate-x-4"></div>
+    <div id="booking-form" className="bg-white/98 backdrop-blur-sm p-8 rounded-2xl shadow-2xl border border-blue-100/50 max-w-md w-full relative overflow-hidden animate-slide-in-right">
+      {/* Subtle decorative gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-yellow-50/20 pointer-events-none"></div>
       
       {/* Header */}
       <div className="text-center mb-6 relative z-10">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2 animate-pulse">Start Your Child's Journey</h3>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Start Your Child's Journey</h3>
         <p className="text-gray-600 font-semibold">Book your ₹49 demo class now</p>
       </div>
       
@@ -50,7 +49,7 @@ const BookingForm = () => {
             value={mobile}
             onChange={(e) => setMobile(e.target.value.replace(/\D/g, '').slice(0, 15))}
             placeholder="Enter your mobile number"
-            className="w-full h-12 text-base font-semibold border-2 border-blue-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 rounded-xl transition-all duration-200 hover:border-blue-300"
+            className="w-full h-12 text-base font-semibold border-2 border-blue-200 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 focus:shadow-lg rounded-xl transition-all duration-300 hover:border-blue-300 hover:shadow-md"
           />
         </div>
 
@@ -66,10 +65,10 @@ const BookingForm = () => {
                 type="button"
                 variant={selectedAge === age ? "default" : "outline"}
                 onClick={() => setSelectedAge(age)}
-                className={`h-12 font-bold text-base transition-all duration-300 rounded-xl ${
+                className={`h-12 font-bold text-base transition-all duration-300 rounded-xl shadow-sm hover:shadow-md ${
                   selectedAge === age 
-                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg transform scale-105 animate-pulse' 
-                    : 'border-2 border-blue-200 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 hover:shadow-md hover:scale-105'
+                    ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white shadow-lg transform scale-105' 
+                    : 'border-2 border-blue-200 hover:bg-blue-50 hover:border-blue-400 hover:text-blue-700 hover:transform hover:scale-105'
                 }`}
               >
                 {age}
@@ -78,10 +77,10 @@ const BookingForm = () => {
           </div>
         </div>
 
-        {/* Urgency Message - Above Button */}
-        <div className="bg-gradient-to-r from-red-500 to-orange-500 border-2 border-red-600 rounded-xl p-4 animate-pulse">
+        {/* Urgency Message - Cleaner design */}
+        <div className="bg-gradient-to-r from-red-500 to-orange-500 border border-red-600 rounded-xl p-4 shadow-lg">
           <p className="text-white font-bold text-sm flex items-center justify-center">
-            <Flame className="w-5 h-5 mr-2 animate-bounce" />
+            <Flame className="w-5 h-5 mr-2" />
             Only 5 seats left for today! Book now!
           </p>
         </div>
@@ -90,12 +89,9 @@ const BookingForm = () => {
         <Button
           type="submit"
           disabled={!canSubmit}
-          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-xl hover:shadow-2xl text-lg relative overflow-hidden"
+          className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-xl shadow-lg text-lg focus:ring-4 focus:ring-blue-200"
         >
-          <span className="relative z-10">Book Demo for ₹49</span>
-          {canSubmit && (
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400/30 to-blue-600/30 animate-pulse"></div>
-          )}
+          Book Demo for ₹49
         </Button>
 
         {/* Trust Elements */}
