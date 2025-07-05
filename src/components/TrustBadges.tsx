@@ -5,22 +5,25 @@ import { Star, Heart, Play } from 'lucide-react';
 const TrustBadges = () => {
   const badges = [
     {
-      icon: <Star className="w-4 h-4 text-yellow-600" />,
+      icon: <Star className="w-5 h-5 text-yellow-600" />,
       text: "4.8 on Google",
-      bgColor: "bg-gradient-to-r from-yellow-50 to-yellow-100 border-yellow-200",
-      textColor: "text-yellow-800"
+      bgColor: "bg-gradient-to-r from-yellow-400 to-yellow-500 border-yellow-600",
+      textColor: "text-white",
+      shadow: "shadow-yellow-200"
     },
     {
-      icon: <Heart className="w-4 h-4 text-green-600" />,
+      icon: <Heart className="w-5 h-5 text-white" />,
       text: "4.7 on Trustpilot",
-      bgColor: "bg-gradient-to-r from-green-50 to-green-100 border-green-200",
-      textColor: "text-green-800"
+      bgColor: "bg-gradient-to-r from-green-500 to-green-600 border-green-700",
+      textColor: "text-white",
+      shadow: "shadow-green-200"
     },
     {
-      icon: <Play className="w-4 h-4 text-red-600" />,
+      icon: <Play className="w-5 h-5 text-white" />,
       text: "Featured on Shark Tank",
-      bgColor: "bg-gradient-to-r from-red-50 to-red-100 border-red-200",
-      textColor: "text-red-800"
+      bgColor: "bg-gradient-to-r from-red-500 to-red-600 border-red-700",
+      textColor: "text-white",
+      shadow: "shadow-red-200"
     }
   ];
 
@@ -29,7 +32,8 @@ const TrustBadges = () => {
       {badges.map((badge, index) => (
         <div
           key={index}
-          className={`flex items-center space-x-2 px-4 py-3 rounded-full border-2 ${badge.bgColor} shadow-md hover:shadow-lg transition-all duration-200 transform hover:scale-105`}
+          className={`flex items-center space-x-3 px-5 py-3 rounded-full border-2 ${badge.bgColor} ${badge.shadow} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer animate-bounce`}
+          style={{animationDelay: `${index * 0.2}s`, animationDuration: '2s'}}
         >
           {badge.icon}
           <span className={`text-sm font-bold ${badge.textColor}`}>{badge.text}</span>
