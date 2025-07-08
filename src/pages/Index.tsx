@@ -82,7 +82,7 @@ const Index = () => {
               </div>
 
               {/* Mobile CTA */}
-              {/* <div className="lg:hidden pt-2 sm:pt-4">
+              <div className="lg:hidden pt-2 sm:pt-4">
                 <Button
                   onClick={scrollToBooking}
                   size="lg"
@@ -91,7 +91,7 @@ const Index = () => {
                   Book Demo Class - ₹49
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
                 </Button>
-              </div> */}
+              </div>
 
               {/* Features Grid - Compact */}
               <div className="grid grid-cols-2 gap-2 sm:gap-4">

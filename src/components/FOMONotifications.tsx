@@ -40,7 +40,7 @@ const FOMONotifications = () => {
 
   return (
     <div
-      className={`fixed bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-auto bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 max-w-xs sm:max-w-xs transform transition-all duration-500 z-50 border border-green-400/20 ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-full opacity-0 scale-95'
+      className={`fixed top-4 sm:top-6 left-4 sm:left-6 right-4 sm:right-auto bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-4 max-w-xs sm:max-w-xs transform transition-all duration-500 z-50 border border-green-400/20 ${isVisible ? 'translate-y-0 opacity-100 scale-100' : 'translate-y-full opacity-0 scale-95'
         }`}
     >
       <div className="flex items-center space-x-2 sm:space-x-3">
