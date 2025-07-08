@@ -56,7 +56,7 @@ const Index = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
                   <span className="text-gray-900">Master English with</span>
                   <br />
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                  <span className="bg-indigo-600 bg-clip-text text-transparent">
                     Expert Teachers
                   </span>
                 </h1>
@@ -88,7 +88,7 @@ const Index = () => {
                     key={index}
                     className="flex items-center space-x-2 sm:space-x-3 p-3 sm:p-4 bg-white/80 backdrop-blur-sm rounded-lg sm:rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300"
                   >
-                    <div className="p-1.5 sm:p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-md sm:rounded-lg text-white shadow-sm">
+                    <div className="p-1.5 sm:p-2 bg-indigo-600 opacity-85 rounded-md sm:rounded-lg text-white shadow-sm">
                       {feature.icon}
                     </div>
                     <span className="font-semibold text-gray-900 text-xs sm:text-sm">{feature.text}</span>
@@ -101,7 +101,7 @@ const Index = () => {
                 <Button
                   onClick={scrollToBooking}
                   size="lg"
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-0"
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-0"
                 >
                   Book Demo Class - ₹49
                   <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />

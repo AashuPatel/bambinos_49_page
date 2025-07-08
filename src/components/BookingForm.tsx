@@ -28,14 +28,14 @@ const BookingForm = () => {
   return (
     <div id="booking-form" className="relative w-full max-w-sm sm:max-w-md mx-auto">
       {/* Enhanced glow effect */}
-      <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 rounded-2xl blur-lg opacity-20"></div>
+      <div className="absolute -inset-1 bg-indigo-600 rounded-2xl blur-lg opacity-20"></div>
 
       <div className="relative bg-white/95 backdrop-blur-xl p-4 sm:p-6 rounded-2xl shadow-xl border border-gray-200/50">
 
         {/* Header - Compact */}
         <div className="text-center mb-4 sm:mb-6">
           <div className="flex items-center justify-center mb-3 sm:mb-4">
-            <div className="p-2 sm:p-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl sm:rounded-2xl shadow-lg">
+            <div className="p-2 sm:p-3 bg-indigo-600 rounded-xl sm:rounded-2xl shadow-lg">
               <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
           </div>
@@ -43,7 +43,7 @@ const BookingForm = () => {
           <p className="text-sm sm:text-base text-gray-600 font-medium">Book your ₹49 demo class now</p>
 
           {/* Urgency indicator - Compact */}
-          <div className="mt-3 sm:mt-4 flex items-center justify-center bg-gradient-to-r from-red-500 to-orange-500 rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-lg">
+          <div className="mt-3 sm:mt-4 flex items-center justify-center bg-orange-500 rounded-lg sm:rounded-xl p-2 sm:p-3 shadow-lg">
             <Flame className="w-3 h-3 sm:w-4 sm:h-4 text-white mr-1 sm:mr-2" />
             <span className="text-white font-bold text-xs sm:text-sm">Only 5 seats left for today!</span>
             <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-white ml-1 sm:ml-2" />
@@ -79,7 +79,7 @@ const BookingForm = () => {
                   variant={selectedAge === age ? "default" : "outline"}
                   onClick={() => setSelectedAge(age)}
                   className={`h-8 sm:h-10 font-bold text-xs sm:text-sm transition-all duration-300 rounded-lg sm:rounded-xl ${selectedAge === age
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-lg scale-105 border-0'
+                    ? 'bg-indigo-600 hover:bg-indigo-700 text-white shadow-lg scale-105 border-0'
                     : 'border-2 border-gray-200 hover:bg-blue-50 hover:border-blue-300 hover:scale-105 bg-white/80'
                     }`}
                 >
@@ -92,12 +92,15 @@ const BookingForm = () => {
           {/* Submit Button - Compact */}
           <Button
             type="submit"
-            disabled={!canSubmit}
-            className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-3 sm:py-4 rounded-lg sm:rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl text-base sm:text-lg border-0"
+            disabled={canSubmit}
+            className="w-full bg-indigo-600  text-white font-bold py-3 sm:py-4 rounded-lg sm:rounded-xl transition-all duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-xl  hover:bg-indigo-700 text-base sm:text-lg border-0"
           >
             Book Demo for ₹49
             <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
           </Button>
+
+
+
 
           {/* Trust Elements - Compact */}
           <div className="bg-green-50 border border-green-200 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center">
