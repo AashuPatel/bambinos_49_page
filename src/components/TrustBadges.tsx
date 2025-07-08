@@ -37,17 +37,17 @@ const TrustBadges = () => (
       </div>
     </div>
     {/* Outlined pills row: responsive stack */}
-    <div className="flex flex-col sm:flex-row w-full gap-2 items-center justify-between">
+    <div className="flex flex-col sm:flex-row w-full gap-2 items-center justify-center">
       {/* Shark Tank outlined pill */}
-      <div className="flex items-center px-6 py-2 border border-blue-600 text-blue-700 rounded-lg font-medium text-sm bg-white w-full sm:w-auto justify-center">
+      <div className="min-w-full flex items-center  py-2 border border-blue-600 text-blue-700 rounded-lg font-medium text-sm bg-white  sm:w-auto justify-center">
         <TVIcon />
         <span>As seen on Shark Tank</span>
       </div>
       {/* Few seats left outlined pill */}
-      <div className="flex items-center px-11 py-2  bg-yellow-100 text-yellow-800 border border-yellow-300  rounded-lg font-medium text-sm  w-full sm:w-auto justify-center">
+      {/* <div className="flex items-center px-11 py-2  bg-yellow-100 text-yellow-800 border border-yellow-300  rounded-lg font-medium text-sm  w-full sm:w-auto justify-center">
         <FlameIcon />
         <span> Only Limited slots available at just 49-/</span>
-      </div>
+      </div> */}
     </div>
     {/* Large Demo Class pill - now white, gray border, less radius */}
     <div className="flex items-center justify-center w-full mt-1">
