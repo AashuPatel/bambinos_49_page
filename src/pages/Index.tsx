@@ -71,18 +71,8 @@ const Index = () => {
                 <p className="text-base sm:text-lg lg:text-xl text-gray-600 font-medium leading-relaxed max-w-xl">
                   Live 1-on-1 sessions with certified teachers. Transform your child's English skills with personalized learning.
                 </p>
-                
-              {/* Mobile CTA */}
-              <div className="lg:hidden pt-2 sm:pt-4">
-                <Button
-                  onClick={scrollToBooking}
-                  size="lg"
-                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-0"
-                >
-                  Book Demo Class - ₹49
-                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
-                </Button>
-              </div>
+
+
 
                 <div className="flex justify-center mb-6 sm:mb-8">
                   <TrustBadges />
@@ -117,6 +107,17 @@ const Index = () => {
                 ))}
               </div>
 
+              {/* Mobile CTA */}
+              <div className="lg:hidden pt-2 sm:pt-4">
+                <Button
+                  onClick={scrollToBooking}
+                  size="lg"
+                  className="w-full bg-indigo-600 hover:bg-indigo-700 text-white px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-bold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] border-0"
+                >
+                  Book Demo Class - ₹49
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2" />
+                </Button>
+              </div>
 
             </div>
 
