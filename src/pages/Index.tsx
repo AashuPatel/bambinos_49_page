@@ -5,6 +5,13 @@ import TrustBadges from '@/components/TrustBadges';
 import FOMONotifications from '@/components/FOMONotifications';
 import { Button } from '@/components/ui/button';
 import { Star, Users, Award, Globe, CheckCircle, Sparkles, Zap, Shield, Play, ArrowRight } from 'lucide-react';
+import FeaturesSection from '@/components/FeaturesSection';
+import WhyBambinosSection from '@/components/WhyBambinosSection';
+import TeacherProfilesSection from '@/components/TeacherProfilesSection'; // Assuming this component exists
+import TestimonialsSection from '@/components/TestimonialsSection'; // Assuming this component exists
+import ContactSection from '@/components/ContactSection'; // Assuming this component exists   
+
+
 
 const Index = () => {
   const scrollToBooking = () => {
@@ -34,7 +41,7 @@ const Index = () => {
       </div>
 
       <Header />
-      <FOMONotifications />
+      {/* <FOMONotifications /> */}
 
       {/* Main Content - Compact Single Fold */}
       <section className="relative z-10 pt-4 sm:pt-6 pb-8 sm:pb-12">
@@ -117,6 +124,14 @@ const Index = () => {
             </div>
           </div>
 
+
+          <FeaturesSection />
+          <WhyBambinosSection />
+          <TeacherProfilesSection />
+          <TestimonialsSection />
+          <ContactSection />
+
+              
           {/* Stats Section - Compact */}
           <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-200">
             <div className="grid grid-cols-3 gap-4 sm:gap-8">
@@ -133,6 +148,8 @@ const Index = () => {
               ))}
             </div>
           </div>
+
+          
 
           {/* Social Proof Section - Compact */}
           <div className="mt-8 sm:mt-12 bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 rounded-lg sm:rounded-2xl p-6 sm:p-8 text-center shadow-xl">

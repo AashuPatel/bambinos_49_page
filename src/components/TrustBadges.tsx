@@ -37,24 +37,27 @@ const TrustBadges = () => (
       </div>
     </div>
     {/* Outlined pills row: responsive stack */}
-    <div className="flex flex-col sm:flex-row w-full gap-2 items-center justify-center">
-      {/* Shark Tank outlined pill */}
-      <div className="min-w-full flex items-center  py-2 border border-blue-600 text-blue-700 rounded-lg font-medium text-sm bg-white  sm:w-auto justify-center">
+    <div className="flex w-full gap-2 mb-1">
+      {/* Shark Tank pill */}
+      <div className="flex items-center gap-2 px-3 py-3 bg-white text-blue-700 border border-blue-600 rounded-full flex-2 justify-center">
         <TVIcon />
-        <span>As seen on Shark Tank</span>
+        <span className="font-semibold text-sm">As seen on Shark Tank</span>
       </div>
-      {/* Few seats left outlined pill */}
-      {/* <div className="flex items-center px-11 py-2  bg-yellow-100 text-yellow-800 border border-yellow-300  rounded-lg font-medium text-sm  w-full sm:w-auto justify-center">
-        <FlameIcon />
-        <span> Only Limited slots available at just 49-/</span>
-      </div> */}
+
+      {/* Limited slots pill */}
+      <div className="flex items-center gap-2 px-3 py-3 bg-white text-blue-700 border border-blue-600 rounded-full flex-1 justify-center">
+        {/* <FlameIcon /> */}
+        <span className="font-semibold text-sm">Demo Class: ₹49</span>
+      </div>
     </div>
+
+
     {/* Large Demo Class pill - now white, gray border, less radius */}
-    <div className="flex items-center justify-center w-full mt-1">
+    {/* <div className="flex items-center justify-center w-full mt-1">
       <div className="w-full flex items-center justify-center px-0">
         <span className="w-full text-center px-20 py-3 bg-indigo-600 border border-gray-300 rounded-full text-white font-extrabold text-xl tracking-wide">Demo Class: ₹49</span>
       </div>
-    </div>
+    </div> */}
   </div>
 );
 
